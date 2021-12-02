@@ -2,6 +2,7 @@ FROM adoptopenjdk/openjdk11:jdk-11.0.11_9-alpine AS build
 WORKDIR /workspace/app
 
 COPY . /workspace/app
+RUN chmod +x gradlew
 RUN --mount=type=cache,target=/root/.gradle ./gradlew clean build -xtest
 RUN mkdir -p build/dependency && (cd build/dependency; jar -xf ../libs/*.jar)
 
