@@ -147,4 +147,5 @@ public class CustomerDo {
     public void setCountryName(String countryName) {
         this.countryName = countryName;
     }
+
 }

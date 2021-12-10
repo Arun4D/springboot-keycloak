@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "app.security.enabled",
+      "type": "java.lang.String",
+      "description": "app.security.enabled property to enable or disable the keycloak security role."
+  }
+] }

@@ -14,23 +14,20 @@ public class CustomerDetailsAssembler {
     public CustomerDo assembleCustomerDetailsDomain(CustomerDto customerDto) {
 
         ModelMapper modelMapper = new ModelMapper();
-        CustomerDo customerDo = modelMapper.map(customerDto, CustomerDo.class);
-        return customerDo;
+        return modelMapper.map(customerDto, CustomerDo.class);
     }
     public CustomerDto assembleCustomerDetailsDto(CustomerDo customerDo) {
 
         ModelMapper modelMapper = new ModelMapper();
-        CustomerDto customerDto = modelMapper.map(customerDo, CustomerDto.class);
-        return customerDto;
+        return modelMapper.map(customerDo, CustomerDto.class);
     }
 
     public List<CustomerDto> assembleCustomerDetailsDto(Iterable<CustomerDo> customerDos) {
         List<CustomerDto> customerDtos = new ArrayList<>();
 
-        customerDos.forEach(customerDo -> {
-            customerDtos.add(assembleCustomerDetailsDto(customerDo));
-        });
+        customerDos.forEach(customerDo -> customerDtos.add(assembleCustomerDetailsDto(customerDo)));
 
         return customerDtos;
     }
+
 }

@@ -2,7 +2,6 @@ package in.co.ad.customer.portal.backend.dto;
 
 import lombok.Data;
 
-import javax.persistence.Column;
 import java.io.Serializable;
 
 @Data
